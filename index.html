@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firstname Lastname — Portfolio</title>
+  <meta name="description" content="Research & engineering portfolio: CV, projects, reports, recommendations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b0f14; --fg:#e6eef7; --muted:#a5b4c3; --acc:#67b8ff; --card:#101820; --line:#1b2733; }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; background:var(--bg); color:var(--fg); line-height:1.6}
+    a{color:var(--acc); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px; margin:0 auto; padding:24px}
+    header{display:flex; gap:20px; align-items:center; padding:24px 0; border-bottom:1px solid var(--line)}
+    header img{width:84px; height:84px; border-radius:50%; object-fit:cover; border:1px solid var(--line)}
+    h1{font-size:28px; margin:0}
+    .muted{color:var(--muted)}
+    nav{margin-top:8px}
+    nav a{margin-right:14px; font-weight:600}
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+    section{padding:28px 0; border-bottom:1px solid var(--line)}
+    h2{font-size:22px; margin:0 0 12px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px}
+    .kpis{display:flex; gap:16px; flex-wrap:wrap}
+    .kpi{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 16px}
+    .kpi b{font-size:18px; display:block}
+    ul{padding-left:18px}
+    .pill{display:inline-block; padding:2px 8px; border:1px solid var(--line); background:#0f1821; border-radius:999px; font-size:12px; margin-right:6px}
+    .footer{padding:30px 0; color:var(--muted); font-size:14px}
+    .two{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    @media (max-width:900px){.two{grid-template-columns:1fr}}
+    /* simple project filter */
+    .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px}
+    .filters button{background:transparent; color:var(--fg); border:1px solid var(--line); border-radius:999px; padding:6px 10px; cursor:pointer}
+    .filters button.active{background:var(--acc); color:#001428; border-color:transparent}
+    .project{display:flex; flex-direction:column; gap:6px}
+    .project small{color:var(--muted)}
+    .project .tags{margin-top:2px}
+    .right{text-align:right}
+    .btn{display:inline-block; padding:8px 12px; border-radius:10px; border:1px solid var(--line); background:#0f1821; font-weight:600}
+    .btn:hover{opacity:.9}
+    .list a{display:block; padding:10px 0; border-bottom:1px dashed var(--line)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Profile" />
+      <div style="flex:1">
+        <h1>Firstname Lastname</h1>
+        <div class="muted">PhD student • Guidance, Navigation & Control • Orbital mechanics & cosmology</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#cv">CV</a>
+          <a href="#projects">Projects</a>
+          <a href="#reports">Reports</a>
+          <a href="#recs">Recommendations</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="right">
+        <a class="btn" href="#cv">Download CV</a>
+        <div class="muted" style="margin-top:6px">
+          <a href="https://github.com/yourhandle">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/yourhandle/">LinkedIn</a> ·
+          <a href="https://orcid.org/0000-0000-0000-0000">ORCID</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="grid">
+        <div class="card" style="grid-column: span 7">
+          <h2>About</h2>
+          <p>
+            Short bio (3–5 lines). Example: I’m a PhD student working on mission design around
+            libration points (CR3BP, manifold matching, GMAT validation) and observational cosmology. Previously at NASA GSFC and JPL.
+          </p>
+          <div class="kpis">
+            <div class="kpi"><b>6+</b> years engineering</div>
+            <div class="kpi"><b>3</b> research labs</div>
+            <div class="kpi"><b>10+</b> projects</div>
+          </div>
+        </div>
+        <div class="card" style="grid-column: span 5">
+          <h2>Highlights</h2>
+          <ul>
+            <li>NASA GSFC — L1→L4 transfer design, GMAT & CRTBP.</li>
+            <li>JPL — LEED instrument for cometary ices.</li>
+            <li>Euclid/DESI — large-scale structure analysis.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="two">
+      <div class="card">
+        <h2>CV</h2>
+        <p>
+          Keep a PDF in <code>/files/CV.pdf</code> and link it here:
+          <a href="files/CV.pdf" download>Download CV (PDF)</a> · <a href="files/CV.pdf" target="_blank">View online</a>
+        </p>
+        <p class="muted">You can also export a short, 1-page Resume as <code>/files/Resume.pdf</code>.</p>
+      </div>
+      <div class="card">
+        <h2>Quick Info</h2>
+        <ul>
+          <li>Email: <a href="mailto:you@domain.com">you@domain.com</a></li>
+          <li>Location: City, Country</li>
+          <li>Interests: CR3BP • GMAT • Solar sails • Cosmology</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="space">Space</button>
+        <button data-filter="code">Code</button>
+        <button data-filter="pub">Publications</button>
+      </div>
+      <div class="grid" id="project-list">
+        <div class="card project" data-tags="space code">
+          <b>Manifold-assisted transfer L1→L4</b>
+          <small>CR3BP • Newton matching • GMAT validation</small>
+          <div class="tags"><span class="pill">CR3BP</span><span class="pill">GMAT</span><span class="pill">Python</span></div>
+          <div>
+            <a href="https://github.com/yourhandle/L1L4-transfer">Code</a> ·
+            <a href="files/NASA_GSFC_Report.pdf" target="_blank">Report (PDF)</a>
+          </div>
+        </div>
+        <div class="card project" data-tags="space pub">
+          <b>Solar-sail effects near L1/L2</b>
+          <small>Augmented normalized Hill 3BP • sensitivity</small>
+          <div class="tags"><span class="pill">ANH3BP</span><span class="pill">Dynamics</span></div>
+          <div>
+            <a href="#">Preprint</a> · <a href="#">Slides</a>
+          </div>
+        </div>
+        <div class="card project" data-tags="code">
+          <b>CR3BP Toolkit</b>
+          <small>STM integration, shooting methods, Poincaré maps</small>
+          <div class="tags"><span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">SciPy</span></div>
+          <div>
+            <a href="https://github.com/yourhandle/CR3BP-toolkit">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reports" class="two">
+      <div class="card">
+        <h2>Reports & Docs</h2>
+        <div class="list">
+          <a href="files/NASA_GSFC_Report.pdf" target="_blank">NASA GSFC Internship — Final Report</a>
+          <a href="files/JPL_LEED_Internship.pdf" target="_blank">JPL — LEED instrument (ices) report</a>
+          <a href="files/ESA_Mission_Study.pdf" target="_blank">ESA Mission Design Summary</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Teaching & Talks</h2>
+        <ul>
+          <li>Journal club: FLAMINGO scaling relations as isotropy tracers.</li>
+          <li>Guest talk: Dynamics around Lagrange points.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="recs" class="two">
+      <div class="card">
+        <h2>Recommendations</h2>
+        <p>Host scanned PDFs or quotes (with permission). Place letters in <code>/files/recommendations/</code>.</p>
+        <ul>
+          <li><a href="files/recommendations/Rec_Supervisor_2024.pdf" target="_blank">Prof. X — Recommendation (2024)</a></li>
+          <li><a href="files/recommendations/Rec_NASA_Mentor.pdf" target="_blank">NASA Mentor — Letter</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Awards</h2>
+        <ul>
+          <li>Grant / Scholarship — 2025</li>
+          <li>Best Student Project — 2024</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email preferred. I usually reply within 48h.</p>
+        <ul>
+          <li>Email: <a href="mailto:you@domain.com">you@domain.com</a></li>
+          <li>Calendly: <a href="#">Book a slot</a></li>
+          <li>Google Scholar: <a href="#">Profile</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Firstname Lastname. Built with ♥ and GitHub Pages.</div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const buttons=[...document.querySelectorAll('.filters button')];
+    const projects=[...document.querySelectorAll('#project-list .project')];
+    buttons.forEach(b=>b.addEventListener('click',()=>{
+      buttons.forEach(x=>x.classList.remove('active')); b.classList.add('active');
+      const tag=b.dataset.filter; projects.forEach(p=>{
+        const ok= tag==='all' || (p.dataset.tags||'').includes(tag);
+        p.style.display= ok? 'block':'none';
+      });
+    }));
+  </script>
+</body>
+</html>
